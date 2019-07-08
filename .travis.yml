@@ -21,7 +21,7 @@ before_script:
   - sh -c "composer install"
   
 script:
-  - phpunit
+  - ./vendor/bin/phpunit
 
 notifications:
   email: false
