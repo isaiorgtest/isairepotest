@@ -18,8 +18,7 @@ branches:
     - master
 
 before_script:
-  - composer install
-  - sh -c "composer global require 'phpunit/phpunit=3.7.*'"
+  - sh -c "composer install"
   - phpunit --version
   - sudo locale-gen de_DE
   - sudo locale-gen es_ES
