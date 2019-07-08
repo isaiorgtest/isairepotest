@@ -6,7 +6,7 @@ class PostsController extends AppController {
 		$this->set('posts', $this->Post->find('all'));
 	}
 	
-	public function testtest7() {
+	public function testtest9() {
 		echo "Nothing";
 		die;
 	}
