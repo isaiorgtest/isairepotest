@@ -114,6 +114,7 @@ before_script:
     }
     }" > app/Config/database.php
 script:
+  - chmod -R 777 ./lib/Cake/Console/cake
   - sh -c "if [ '$PHPCS' != '1' ]; then ./lib/Cake/Console/cake test core AllTests --stderr; fi"
   - sh -c "if [ '$PHPCS' = '1' ]; then ~/.composer/vendor/bin/phpcs -p --extensions=php --standard=CakePHP ./lib/Cake; fi;"
 
