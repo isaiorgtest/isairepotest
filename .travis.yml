@@ -13,15 +13,15 @@ services:
 matrix:
   fast_finish: true
   include:
-    - php: 5.4
-      env: DB=pgsql
+    - php: 5.3
+      dist: precise
 
     - php: 5.4
-      env: DB=sqlite
+      env: DB=ysql
 
-    - php: 5.4
-      env: PHPCS=1
-
+branches:
+  only:
+    - master
 
 before_script:
   - sh -c "composer global require 'phpunit/phpunit=3.7.33'"
