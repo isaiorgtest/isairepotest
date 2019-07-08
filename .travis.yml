@@ -19,7 +19,7 @@ branches:
 
 before_script:
   - git clone git://github.com/cakephp/cakephp ../cakephp && cd ../cakephp
-  - chmod -R 777 ../cakephp/app/tmp
+  - chmod -R 777 ./app/tmp
   - sh -c "mysql -e 'CREATE DATABASE cakephp_test;'"
   - echo "<?php
     class DATABASE_CONFIG {
@@ -28,13 +28,12 @@ before_script:
       'database' => 'cakephp_test',
       'host' => '0.0.0.0',
       'login' => 'travis',
-      'host' => '',
       'persistent' => false,
     );
-    }" > ../cakephp/app/Config/database.php
+    }" > app/Config/database.php
  
 script:
-  - ./lib/Cake/Console/cake test AssetCompress AllTests --stderr
+  - ./lib/Cake/Console/cake test core AllTests --stderr
 
 notifications:
   email: false
