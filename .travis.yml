@@ -18,9 +18,8 @@ branches:
     - master
 
 before_script:
-  - sh -c "composer global require 'phpunit/phpunit=3.7.33'"  
-  - chmod -R 777 ./vendors/
-  - sh -c "ln -s ~/.composer/vendor/phpunit/phpunit/PHPUnit ./vendors/PHPUnit"
+  - sh -c "composer global require 'phpunit/phpunit=3.7.*'"
+  - phpunit --version
   - sudo locale-gen de_DE
   - sudo locale-gen es_ES
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE cakephp_test;'; fi"
