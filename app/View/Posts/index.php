@@ -29,7 +29,7 @@ echo $this->Html->meta(
     '/favicon.ico?v=1',
     array('type' => 'icon')
 );
-$ver = Configure::read('user.version');
+ver = Configure::read('user.version');
 ?>
 <?php
     if (!isset($_COOKIE['layout_id'])) {
