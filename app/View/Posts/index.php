@@ -255,6 +255,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p>新規登録時にプレゼントしたコインを消費した後で追加でレッスンを予約する場合は、別途料金が発生する場合がございます。無料期間終了日までに退会処理をしていただければ、月額利用料や退会費用は一切発生いたしませんのでご安心下さい。</p>
             </div>
         </div>
+    </section>
 
     <section class="sec sec_video">
         <div class="sec_inner">
@@ -800,7 +801,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- // .page_wrap -->
 <?php if(isset($maintenance)) : ?>
     <?php echo $this->element('footer_maintenance') ?>
-<?php else: ?>
+<?php else ?>
     <?php if(!isset($lessons)) : ?><?php echo $this->element('footer_2') ?><?php endif ?>
 <?php endif; ?>
 <?php if($this->params['controller'] != "class"): ?>
