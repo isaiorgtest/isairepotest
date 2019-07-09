@@ -21,8 +21,6 @@ before_script:
   - sh -c "composer install"
 
 script:
-  - chmod -R 777 ./lib/Cake/Console/
-  - sh -c "if [ '$PHPCS' = '1' ]; then phpcs -p --extensions=php --standard=CakePHP ./lib/Cake; elif [ '$DB' = 'mysql' ]; then ./lib/Cake/Console/cake test core AllTests --stderr; else ./lib/Cake/Console/cake test core AllDbRelated --stderr; fi"
 
 notifications:
   email: false
