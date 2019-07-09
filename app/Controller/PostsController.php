@@ -7,7 +7,7 @@ class PostsController extends AppController {
 	}
 	
 	public function testtest12() {
-		echo "Nothing"
+		echo "Nothing";
 		die;
 	}
 
