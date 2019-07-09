@@ -19,10 +19,9 @@ branches:
 
 before_script:
   - sh -c "composer global require 'phpunit/phpunit=3.7.33'"
-  - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
 
 script:
-  - ./vendor/bin/phpunit --debug
+  - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
 
 notifications:
   email: false
