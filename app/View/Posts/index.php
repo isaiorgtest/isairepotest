@@ -54,7 +54,7 @@ $ver = Configure::read('user.version');
     var controllerName = "<?php echo $this->name; ?>";
     var protocolDomain = window.location.protocol + "//" + window.location.host;
     var currentHref = window.location.href;
-    var activeFullUrlPath = (currentHref == protocolDomain  '/appointment') ? protocolDomain + '/appointment' : ( currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : (currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : protocolDomain + '/mypage';
+    var activeFullUrlPath = (currentHref == protocolDomain + '/appointment') ? protocolDomain + '/appointment' : ( currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : (currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : protocolDomain + '/mypage';
     
     if(currentHref == activeFullUrlPath) {
         if(window.performance && window.performance.navigation.type === 2) {
@@ -255,7 +255,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p>新規登録時にプレゼントしたコインを消費した後で追加でレッスンを予約する場合は、別途料金が発生する場合がございます。無料期間終了日までに退会処理をしていただければ、月額利用料や退会費用は一切発生いたしませんのでご安心下さい。</p>
             </div>
         </div>
-    </section>
 
     <section class="sec sec_video">
         <div class="sec_inner">
