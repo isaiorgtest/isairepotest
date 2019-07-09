@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@NativeCamp"/>
 <meta http-equiv="Expires" content="86400">
-<?php if(in_array(strtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
+<?php if(in_array(strtolower$this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
 <meta name="robots" content="noindex">
 <?php endif;?>
 <?php
@@ -50,7 +50,7 @@ $ver = Configure::read('user.version');
 ?>
 <script type="text/javascript">
     // forcely refresh page if back btn is clicked.
-    var login=<?php echo ($this->Session->read('Auth.User.id'))?1:0 ?>;
+    var login=<?php echo ($this->Session->read('Auth.User.id'))?1:0; ?>;
     var controllerName = "<?php echo $this->name; ?>";
     var protocolDomain = window.location.protocol + "//" + window.location.host;
     var currentHref = window.location.href;
