@@ -22,7 +22,7 @@ before_script:
   - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
 
 script:
-  - ~/.composer/vendor/phpunit
+  - ~/.composer/vendor/phpunit/phpunit/PHPUnit
 
 notifications:
   email: false
