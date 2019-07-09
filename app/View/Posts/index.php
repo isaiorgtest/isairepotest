@@ -50,7 +50,7 @@ $ver = Configure::read('user.version');
 ?>
 <script type="text/javascript">
     // forcely refresh page if back btn is clicked.
-    var login=<?php echo ($this->Session->read('Auth.User.id'))?1:0; ?>;
+    var login=<?php echo ($this->Session->read('Auth.User.id'))?1:0;; ?>;
     var controllerName = "<?php echo $this->name; ?>";
     var protocolDomain = window.location.protocol + "//" + window.location.host;
     var currentHref = window.location.href;
