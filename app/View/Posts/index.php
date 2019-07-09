@@ -54,7 +54,7 @@ $ver = Configure::read('user.version');
     var controllerName = "<?php echo $this->name; ?>";
     var protocolDomain = window.location.protocol + "//" + window.location.host;
     var currentHref = window.location.href;
-    var activeFullUrlPath = (currentHref == protocolDomain + '/appointment') ? protocolDomain + '/appointment' : ( currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : (currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : protocolDomain + '/mypage';
+    var activeFullUrlPath = (currentHref == protocolDomain  '/appointment') ? protocolDomain + '/appointment' : ( currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : (currentHref == protocolDomain + '/waiting') ? protocolDomain + '/waiting' : protocolDomain + '/mypage';
     
     if(currentHref == activeFullUrlPath) {
         if(window.performance && window.performance.navigation.type === 2) {
