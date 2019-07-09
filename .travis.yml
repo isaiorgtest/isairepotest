@@ -18,9 +18,7 @@ branches:
     - master
 
 before_script:
-  - sh -c "composer install"
-
-script:
+  - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
 
 notifications:
   email: false
