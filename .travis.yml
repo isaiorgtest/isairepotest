@@ -18,11 +18,7 @@ branches:
     - master
 
 script:
-  - |
-    files=`git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep "php"`
-    for file in $files; do
-      php -d error_reporting=32767 -l $file \; 2>&1 >&- | grep "^"
-    done
+  - phpcs --standard=PSR2 $(git diff-tree --no-commit-id --name-only -r `git log --format="%H" -n 1` | grep .php)
 
 notifications:
   email: false
