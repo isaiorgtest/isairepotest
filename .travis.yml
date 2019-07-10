@@ -31,7 +31,10 @@ script:
       php -d error_reporting=32767 -l $file \; 2>&1 >&-
     done
     )"
-    echo $output | grep "^"
+    if ! [ -z "$ouput" ]; then
+        echo $output
+        exit 1
+    fi
 
 
 notifications:
