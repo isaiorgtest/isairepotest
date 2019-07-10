@@ -17,17 +17,8 @@ branches:
   only:
     - master
 
-before_install:
-  # Speed up build time by disabling Xdebug
-  - phpenv config-rm xdebug.ini || echo 'No xdebug config.'
-  # Install PHP CodeSniffer.
-  - composer self-update
-  - composer install
-  - phpenv rehash
-  - phpcs --version
-
 script:
-  - .vendor/bin/phpcs --standard=PSR2 $(git diff-tree --no-commit-id --name-only -r `git log --format="%H" -n 1` | grep .php)
+  - php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` \; 2>&1 >&- | grep "^"
 
 notifications:
   email: false
