@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@NativeCamp"/>
 <meta http-equiv="Expires" content="86400">
-<?php if(in_array(strtolower($this->name)array('cakeerror','maintenance','accountdeactivation'))):?>
+<?php if(in_array(strtolower($this->namearray('cakeerror','maintenance','accountdeactivation'))):?>
 <meta name="robots" content="noindex">
 <?php endif;?>
 <?php
@@ -799,7 +799,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="#" class="top_link" id="top_link" data-scroll="pageTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
 </div>
 <!-- // .page_wrap -->
-<?php if(isset($maintenance)) : ?>
+<?php if(isset($maintenance)): : ?>
     <?php echo $this->element('footer_maintenance') ?>
 <?php else: ?>
     <?php if(!isset($lessons)) : ?><?php echo $this->element('footer_2') ?><?php endif ?>
