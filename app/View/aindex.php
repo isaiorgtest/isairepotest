@@ -24,7 +24,6 @@
 <meta name="robots" content="noindex">
 <?php endif;?>
 <?php
-jkxdjkzxdc
 echo $this->Html->meta(
     'favicon.ico',
     '/favicon.ico?v=1',
