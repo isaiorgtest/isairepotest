@@ -23,8 +23,8 @@ before_script:
 script:
   - files=`git diff-tree --no-commit-id --name-only -r  7a76bee`
   - for file in $files; do
-  - php -d error_reporting=32767 -l $file \; 2>&1 >&- | grep "^"
-  - done
+    php -d error_reporting=32767 -l $file \; 2>&1 >&- | grep "^"
+    done
 
 
 notifications:
