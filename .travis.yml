@@ -26,7 +26,7 @@ script:
   - echo $TRAVIS_PULL_REQUEST
   - echo $TRAVIS_PULL_REQUEST_SHA
   - |
-    files=`git diff-tree --no-commit-id --name-only -r ${TRAVIS_COMMIT} | grep "php"`
+    files=`git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep "php"`
     for file in $files; do
       php -d error_reporting=32767 -l $file \; 2>&1 >&- | grep "^"
     done
