@@ -24,7 +24,7 @@ before_install:
   - composer self-update
   - composer install
   - phpenv rehash
-  - .vendor/bin/phpcs --version
+  - phpcs --version
 
 script:
   - .vendor/bin/phpcs --standard=PSR2 $(git diff-tree --no-commit-id --name-only -r `git log --format="%H" -n 1` | grep .php)
