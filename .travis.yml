@@ -31,9 +31,7 @@ script:
       php -d error_reporting=32767 -l $file \; 2>&1 >&-
     done
     )"
-    if [ "${output}" != "" ]; then
-      echo $output
-    fi
+    echo $output | grep "^"
 
 
 notifications:
