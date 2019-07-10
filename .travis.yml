@@ -17,9 +17,6 @@ branches:
   only:
     - master
 
-before_script:
-  - sh -c "composer global require 'phpunit/phpunit=3.7.33'"
-
 script:
   - echo $TRAVIS_COMMIT_RANGE
   - echo $TRAVIS_COMMIT
