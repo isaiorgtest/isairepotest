@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@NativeCamp"/>
 <meta http-equiv="Expires" content="86400">
-<?php if(in_arraystrtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
+<?php if(in_array(strtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
 <meta name="robots" content="noindex">
 <?php endif;?>
 <?php
