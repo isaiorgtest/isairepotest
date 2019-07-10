@@ -26,10 +26,14 @@ script:
   - echo $TRAVIS_PULL_REQUEST
   - echo $TRAVIS_PULL_REQUEST_SHA
   - |
-    files=`git diff-tree --no-commit-id --name-only -r  7a76bee`
+    output="$( files=`git diff-tree --no-commit-id --name-only -r  7a76bee`
     for file in $files; do
       php -d error_reporting=32767 -l $file \; 2>&1 >&-
     done
+    )"
+    if [ "${output}" != "" ]; then
+      exit 1
+    fi
 
 
 notifications:
