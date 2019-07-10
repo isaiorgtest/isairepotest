@@ -21,6 +21,10 @@ before_script:
   - sh -c "composer global require 'phpunit/phpunit=3.7.33'"
 
 script:
+  - echo $TRAVIS_COMMIT_RANGE
+  - echo $TRAVIS_COMMIT
+  - echo $TRAVIS_PULL_REQUEST
+  - echo $TRAVIS_PULL_REQUEST_SHA
   - |
     files=`git diff-tree --no-commit-id --name-only -r  7a76bee`
     for file in $files; do
