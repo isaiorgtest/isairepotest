@@ -146,7 +146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TD5C6H');</script>
 <!-- End Google Tag Manager -->
 
-<div class="header_wrap">
+<div class="header_wrap"> 
 <?php if ($this->params['controller'] !== "TestConnect"): ?>
 <?php if(isset($maintenance)) : ?>
     <?php $this->assign('header','header_maintenance'); ?>

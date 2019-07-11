@@ -18,8 +18,6 @@ branches:
     - master
 
 before_script:
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - echo $SNIFF
   - |
       composer global require wp-coding-standards/wpcs;
       phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
@@ -29,7 +27,7 @@ script:
   # php syntax check
   - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'"
   # php codesniffer check
-  - sh -c "$HOME/.composer/vendor/bin/phpcs `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` --runtime-set ignore_warnings_on_exit 1"
+  - sh -c "$HOME/.composer/vendor/bin/phpcs `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` -n --runtime-set ignore_warnings_on_exit 1"
 
 notifications:
   email: false
