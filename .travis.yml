@@ -18,7 +18,7 @@ branches:
     - master
 
 script:
-  - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r c131663d1f8d2c53340130bf9f061175fc6a8d0a` \; 2>&1 >&- | grep '^'"
+  - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` \; 2>&1 >&- | grep '^'"
 
 notifications:
   email: false
