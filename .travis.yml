@@ -18,13 +18,22 @@ branches:
     - master
 
 before_script:
+  - echo $TRAVIS_COMMIT
+  - echo $TRAVIS_BUILD_ID
+  - echo $TRAVIS_COMMIT_RANGE
+  - echo $TRAVIS_DIST
+  - echo $TRAVIS_EVENT_TYPE
+  - echo $TRAVIS_JOB_ID
+  - echo $TRAVIS_PULL_REQUEST
+  - echo $TRAVIS_PULL_REQUEST_SHA
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - |
       composer global require wp-coding-standards/wpcs;
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
-      phpcs --config-set standard infinum;
+      $HOME/.composer/vendor/bin/phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
+      $HOME/.composer/vendor/bin/phpcs --config-set standard infinum;
 
 script:
+
   # php syntax check
   - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'"
   # php codesniffer check
