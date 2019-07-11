@@ -30,7 +30,7 @@ echo $this->Html->meta(
     array('type' => 'icon')
 );
 $ver = Configure::read('user.version');
-?
+?>
 <?php
     if (!isset($_COOKIE['layout_id'])) {
         $layout_id = '4';

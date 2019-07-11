@@ -28,10 +28,7 @@ before_script:
   - echo $TRAVIS_PULL_REQUEST_SHA
 
 script:
-  - |
-    if [ '$TRAVIS_EVENT_TYPE' = 'push' ]; then 
-      php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^';
-    fi
+  - php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep 'php'` \; 2>&1 >&- | grep '^'
 
 notifications:
   email: false
