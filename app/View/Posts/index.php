@@ -23,7 +23,7 @@
 <?php if(in_array(strtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
 <meta name="robots" content="noindex">
 <?php endif;?> 
-<?php
+<?php 
 echo $this->Html->meta(
     'favicon.ico',
     '/favicon.ico?v=1',
