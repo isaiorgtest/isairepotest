@@ -27,15 +27,12 @@ before_script:
   - echo $TRAVIS_PULL_REQUEST
   - echo $TRAVIS_PULL_REQUEST_SHA
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - |
-      composer global require wp-coding-standards/wpcs;
-      $HOME/.composer/vendor/bin/phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
-      $HOME/.composer/vendor/bin/phpcs --config-set standard infinum;
+  - composer global require wp-coding-standards/wpcs;
 
 script:
 
   # php syntax check
-  - ! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` \; 2>&1 >&- | grep "^"
+  - php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` \; 2>&1 >&- | grep "^"
   # php codesniffer check
   - $HOME/.composer/vendor/bin/phpcs `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` -n --runtime-set ignore_warnings_on_exit 1
 

@@ -10,7 +10,7 @@
 <meta name="keywords" content="オンライン英会話,ネイティブキャンプ,レッスン回数無制限,英語学習">
 <meta name="application-name" content="オンライン英会話ならskype（スカイプ）不要のネイティブキャンプ">
 <meta name="google-site-verification" content="FfrIYMK3Mo3WbWe05Wi4hSkFZ2WncJyDTma0x42JljE">
-<meta property="og:title" content="オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中" />
+<meta property="og:title" content="オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中" /> 
 <meta property="og:description" content="オンライン英会話ネイティブキャンプでは、スマホアプリ、PCから予約なしで英会話レッスンが受講可能です。今なら初回限定<?php echo Configure::read('Free period'); ?>無料体験を実施中！初心者向け、子供向け、TOEIC®L&R TEST、英検対策に加え、カランメソッドやビジネス教材等、英会話学習に効果的なコースを多数設けており、ネットで英語留学が体感できます。" />
 <meta property="og:image" content="https://nativecamp.net/images/logo_ogp.png?ver=4" />
 <meta property="og:url" content="https://nativecamp.net" />
