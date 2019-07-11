@@ -17,16 +17,6 @@ branches:
   only:
     - master
 
-before_script:
-  - echo $TRAVIS_COMMIT
-  - echo $TRAVIS_BUILD_ID
-  - echo $TRAVIS_COMMIT_RANGE
-  - echo $TRAVIS_DIST
-  - echo $TRAVIS_EVENT_TYPE
-  - echo $TRAVIS_JOB_ID
-  - echo $TRAVIS_PULL_REQUEST
-  - echo $TRAVIS_PULL_REQUEST_SHA
-
 script:
   - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
 
