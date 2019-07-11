@@ -36,7 +36,7 @@ $ver = Configure::read('user.version');
         $layout_id = '4';
     }else{
         $layout_id = $_COOKIE['layout_id'];
-    
+    }
 ?>
 <link rel="manifest" href="/manifest.json">
 <?php
