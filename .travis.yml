@@ -27,9 +27,9 @@ before_script:
 
 script:
   # php syntax check
-  - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` \; 2>&1 >&- | grep '^'"
+  - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'"
   # php codesniffer check
-  - sh -c "$HOME/.composer/vendor/bin/phpcs `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` --runtime-set ignore_warnings_on_exit 1"
+  - sh -c "$HOME/.composer/vendor/bin/phpcs `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT | grep 'php'` --runtime-set ignore_warnings_on_exit 1"
 
 notifications:
   email: false

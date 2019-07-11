@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         echo $this->element($headerElement); 
     }
 ?>
-<?php endif; 
+<?php endif; ?>
 </div>
 
 <div class="page_wrap index_wrap--ver_3">
