@@ -17,8 +17,22 @@ branches:
   only:
     - master
 
-script:
-  - sh -c "! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT` \; 2>&1 >&- | grep '^'"
+before_script:
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - if [[ "$SNIFF" == "1" ]]; then
+      composer global require wp-coding-standards/wpcs;
+      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
+      phpcs --config-set standard infinum;
+    fi
 
+script:
+  - find . \( -name '*.php' \) -exec php -lf {} \;
+  - |
+    if [[ "$SNIFF" == "1" ]]; then
+      composer global require wp-coding-standards/wpcs;
+      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
+      phpcs --config-set standard infinum;
+    fi
+    
 notifications:
   email: false
