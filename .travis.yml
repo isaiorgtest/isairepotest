@@ -20,20 +20,14 @@ branches:
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - echo $SNIFF
-  - if [[ "$SNIFF" == "1" ]]; then
+  - |
       composer global require wp-coding-standards/wpcs;
       phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
       phpcs --config-set standard infinum;
-    fi
 
 script:
   - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
-  - |
-    if [[ "$SNIFF" == "1" ]]; then
-      composer global require wp-coding-standards/wpcs;
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs;
-      phpcs --config-set standard infinum;
-    fi
+  - sh -c "vendor/bin/phpcs . --extensions=php --runtime-set ignore_warnings_on_exit 1"
 
 notifications:
   email: false
