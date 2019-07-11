@@ -133,7 +133,7 @@ _lt('send', 'pv', ['1e11feb8-0b70-4f0b-b0b2-826a83b5721d']);
 </script>
 <!-- END Rakuten Marketing Tracking -->
 </head>
-<body <?php echo (isset($showLink) && $showLink) 'class="is-mobile"': ''; ?> ng-app="userApp" ng-cloak>
+<body <?php echo (isset($showLink) && $showLink)? 'class="is-mobile"': ''; ?> ng-app="userApp" ng-cloak>
 <?php $ua = $_SERVER['HTTP_USER_AGENT'];?>
 
 <!-- Google Tag Manager -->
@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         echo $this->element($headerElement); 
     }
 ?>
-<?php endif; ?>
+<?php endif; 
 </div>
 
 <div class="page_wrap index_wrap--ver_3">
