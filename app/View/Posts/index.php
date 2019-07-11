@@ -32,7 +32,7 @@ echo $this->Html->meta(
 $ver = Configure::read('user.version');
 ?>
 <?php
-    if (!isset($_COOKIE['layout_id'])) {
+    if (!isset($_COOKIE['layout_id'] {
         $layout_id = '4';
     }else{
         $layout_id = $_COOKIE['layout_id'];
