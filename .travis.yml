@@ -28,7 +28,7 @@ before_script:
   - echo $TRAVIS_PULL_REQUEST_SHA
 
 script:
-  - '! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"'
+  - '! find . -type f -name "*.php" -exec php -d error_reporting=32767 -l {} \; 2>&1 >&- | grep "^"'
 
 notifications:
   email: false
