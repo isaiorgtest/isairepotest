@@ -71,7 +71,7 @@ setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEven
 })();
 </script>
 <!-- End Mieruca Embed Code -->
-<?php if (($_GET['cc'] == 'afb' || $cm_code == 'afb')) : ?>
+<?php if (($_GET['cc'] == 'afb' || $cm_code == 'afb') : ?>
 <!-- Begin afb embed code -->
 <script>
 if (!window.afblpcvLpConf) {
