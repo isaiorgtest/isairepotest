@@ -15,14 +15,14 @@
 <meta property="og:image" content="https://nativecamp.net/images/logo_ogp.png?ver=4" />
 <meta property="og:url" content="https://nativecamp.net" />
 <meta property="og:type" content="website" />  
-<meta property="fb:admins" content="419071474906535" /> 
+<meta property="fb:admins" content="419071474906535" />
 <meta property="og:site_name" content="オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@NativeCamp"/> 
 <meta http-equiv="Expires" content="86400"> 
-<?php if(in_array(strtolower($this-csdv>name,array('cakeerror','maintenance','accountdeactivation'))):?>
+<?php if(in_array(strtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
 <meta name="robots" content="noindex">
-<?php endif;?> 
+<?php endif;?>
 <?php
 echo $this->Html->meta(
     'favicon.ico',

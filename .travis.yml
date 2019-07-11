@@ -18,7 +18,10 @@ branches:
     - master
 
 script:
-  - sh -c "if [ '$TRAVIS_EVENT_TYPE' == 'push' ]; then php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r  $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'; fi"
+  - |
+    if [ '$TRAVIS_EVENT_TYPE' == 'push' ]; then 
+      sh -c "php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r  $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'""
+    ; fi"
 
 notifications:
   email: false
