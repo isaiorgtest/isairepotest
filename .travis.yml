@@ -17,11 +17,21 @@ branches:
   only:
     - master
 
+before_script:
+  - echo $TRAVIS_COMMIT
+  - echo $TRAVIS_BUILD_ID
+  - echo $TRAVIS_COMMIT_RANGE
+  - echo $TRAVIS_DIST
+  - echo $TRAVIS_EVENT_TYPE
+  - echo $TRAVIS_JOB_ID
+  - echo $TRAVIS_PULL_REQUEST
+  - echo $TRAVIS_PULL_REQUEST_SHA
+
 script:
   - |
     if [ '$TRAVIS_EVENT_TYPE' == 'push' ]; then 
-      sh -c "php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r  $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'""
-    ; fi"
+      sh -c "php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r  $TRAVIS_COMMIT | grep 'php'` \; 2>&1 >&- | grep '^'"
+    ; fi
 
 notifications:
   email: false
