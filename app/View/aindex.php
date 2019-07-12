@@ -676,11 +676,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </ul>
                 </div>
             </div>
-            <div class="update-review m_b_25">
+            <div class="update-review m_b_25">   
                 <h3 class="update_ttl"><a href="/reviews">みんなのレビュー</a></h3>
                 <div class="update_list update_list-review">
                     <ul>
-                        <?php foreach ($reviewDetail aiew): ?>
+                        <?php foreach ($reviewDetail as $review): ?>
                             <li class="b_link">
                                 <a href="/waiting/detail/<?php echo $review['UsersClassEvaluation']['teacher_id']; ?>">
                                     <div class="topic_list">
