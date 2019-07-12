@@ -30,7 +30,13 @@ script:
       echo "[DEBUG] No *.php files found to check"
     else
       echo "[DEBUG] Checking files for errors..."
-      ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"  
+      phperrors=$(! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^")
+      if [ -z "$phperrors" ]; then 
+        echo "[DEBUG] No errors found"
+      else
+        echo "[DEBUG] Errord found:"
+        echo $errors
+      fi
       echo "[DEBUG] Done"
     fi
 
