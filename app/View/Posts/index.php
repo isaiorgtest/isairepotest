@@ -158,7 +158,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <?php else : ?>
             <?php $this->assign('header','header1'); ?>
         <?php endif ?>
-    <?php else: ?>
+        : ?>
         <?php $this->assign('header','header1'); ?>
     <?php endif; ?>
 <?php endif; ?>
