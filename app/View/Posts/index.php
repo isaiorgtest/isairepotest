@@ -47,7 +47,7 @@ $ver = Configure::read('user.version');
         'jquery-ui-1.12.1.css',
         'details_index_ver_3.css?v='.$ver,
     ));
-?>
+?> 
 <script type="text/javascript">
     // forcely refresh page if back btn is clicked.
     var login=<?php echo ($this->Session->read('Auth.User.id'))?1:0; ?>;

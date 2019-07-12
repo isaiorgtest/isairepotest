@@ -28,7 +28,7 @@ echo $this->Html->meta(
     'favicon.ico',
     '/favicon.ico?v=1',
     array('type' => 'icon')
-);
+); 
 $ver = Configure::read('user.version');
 ?>
 <?php
