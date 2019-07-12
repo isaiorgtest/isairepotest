@@ -153,7 +153,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php elseif($this->params['controller'] === "TestConnect"): ?>
 <?php else: ?>
     <?php if($this->Session->read('Auth.User.id')): ?>
-        <?php if (isset($lessons)) : ?>
+        <?php if (isset($lessons)) : ?> 
             <?php //$this->assign('header','headerLesson'); ?>
         <?php else : ?>
             <?php $this->assign('header','header1'); ?>
@@ -163,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <?php endif; ?>
 <?php endif; ?>
 <?php
-    $headerElement = $this->eader');
+    $headerElement = $this->fetch('header');
     if (!empty($headerElement)) {
         echo $this->element($headerElement); 
     }

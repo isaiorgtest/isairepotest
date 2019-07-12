@@ -38,9 +38,9 @@ $ver = Configure::read('user.version');
         $layout_id = $_COOKIE['layout_id'];
     }
 ?>
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/manifest.json"> 
 <?php
-    echo $this->Html->csray(
+    echo $this->Html->css(array(
         'html5reset.css?v='.$ver,
         'common.css?v='.$ver,
         'font-awesome.min.css?v='.$ver,

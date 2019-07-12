@@ -22,11 +22,12 @@ before_script:
 
 script:
   - |
-    CHANGED_FILES=$(git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php")
-    echo $CHANGED_FILES
-    if [ $CHANGED_FILES != '' ]; then
-      ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"
+    if [ '$TRAVIS_EVENT_TYPE' == 'pull_request' ]; then 
+      changed_files=$(git diff --name-only HEAD...$TRAVIS_BRANCH | grep "php")
+    else
+      changed_files=$(git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php")
     fi
+    echo $changed_files
 
 notifications:
   email: false
