@@ -23,13 +23,14 @@ before_script:
 script:
   - |
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
+    echo "[DEBUG] [changed_files]" $changed_files
     if [ '$changed_files' != '' ]; then 
-      whereee=1
+      echo "[DEBUG] not empty changed_files"
       ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"
     else
+      echo "[DEBUG] empty changed_files"
       whereee=2      
     fi
-    echo $whereee
 
 notifications:
   email: false
