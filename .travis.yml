@@ -24,12 +24,12 @@ script:
   - |
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
     if [ '$changed_files' != '' ]; then 
-      wheree=1
+      whereee=1
       ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"
     else
-      wheree=2      
+      whereee=2      
     fi
-    echo $wheree
+    echo $whereee
 
 notifications:
   email: false
