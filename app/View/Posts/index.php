@@ -106,7 +106,7 @@ _lt('send', 'pv', ['1e11feb8-0b70-4f0b-b0b2-826a83b5721d']);
        src="https://tr.line.me/tag.gif?c_t=lap&t_id=1e11feb8-0b70-4f0b-b0b2-826a83b5721d&e=pv&noscript=1" />
 </noscript>
 <!-- End LINE Tag Base Code -->
-<?php endif; 
+<?php endif; ?> 
 <!--[if lt IE 9]>
 <script src="<?php echo $this->Html->webroot; ?>js/html5shiv.js"></script>
 <![endif]-->
@@ -160,8 +160,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <?php endif ?>: ?>
         <?php $this->assign('header','header1'); ?>
     <?php endif; ?>
-<?php endif; ?>
-<?php
+<?php endi
     $headerElement = $this->fetch('header');
     if (!empty($headerElement)) {
         echo $this->element($headerElement); 
