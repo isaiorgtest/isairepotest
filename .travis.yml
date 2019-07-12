@@ -23,8 +23,9 @@ before_script:
 script:
   - |
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
-    echo "[DEBUG] [changed_files]" $changed_files
-    if [ '$changed_files' != '' ]; then 
+    echo "[DEBUG] [changed_files]"
+    echo $changed_files
+    if [ $changed_files != '' ]; then 
       echo "[DEBUG] not empty changed_files"
       ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"
     else
