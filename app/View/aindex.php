@@ -177,7 +177,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="sec_inner">
             <div class="top_column">
                 <!-- if maintenance -->
-                <?php if ( isset($varMaintena ?>
+                <?php if ( isset($varMaintenance) ) : ?>
                     <div class="top_maintenance_area">
                         <h4 class="ttl fs_18 t_center c_white m_b_10">ただいま定期メンテナンス中です</h4>
                         <p class="desc fs_14 c_white">ネイティブキャンプでは、毎週月曜早朝に定期メンテナンスを実施いたしております。<br>
