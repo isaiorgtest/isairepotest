@@ -31,6 +31,7 @@ script:
     else
       echo "[DEBUG] Checking files for errors..."
       ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"  
+      echo "[DEBUG] Done"
     fi
 
 notifications:
