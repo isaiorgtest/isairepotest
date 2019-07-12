@@ -160,7 +160,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <?php endif ?>: ?>
         <?php $this->assign('header','header1'); ?>
     <?php endif; ?>
-<?php endi
+<?php endif; ?>
+<?php
     $headerElement = $this->fetch('header');
     if (!empty($headerElement)) {
         echo $this->element($headerElement); 
