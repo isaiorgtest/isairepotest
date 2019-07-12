@@ -21,7 +21,7 @@ before_script:
   - echo $TRAVIS_COMMIT_RANGE
 
 script:
-  - '! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"'
+  - '! php -d error_reporting=32767 -l `git diff-tree --no-commit-id --name-only -r $TRAVIS_COMMIT_RANGE` \; 2>&1 >&- | grep '^''
 
 notifications:
   email: false
