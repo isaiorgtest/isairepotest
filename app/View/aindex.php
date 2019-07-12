@@ -39,7 +39,7 @@ $ver = Configure::read('user.version');
     }
 ?>
 <link rel="manifest" href="/manifest.json"> 
-<?php 
+<?php  
     echo $this->Html->css(array(
         'html5reset.css?v='.$ver,
         'common.css?v='.$ver,
