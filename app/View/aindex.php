@@ -672,7 +672,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
                                 </a>
                             </li>
-                        <?php endforeach;?>
+                        <?php endforeach;?> 
                     </ul>
                 </div>
             </div>
