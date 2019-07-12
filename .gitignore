@@ -9,9 +9,9 @@
 /dist
 /tags
 *.mo
-
+#
 # IDE and editor specific files #
-#################################
+##################################
 /nbproject
 .idea
 /.project
