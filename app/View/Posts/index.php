@@ -22,7 +22,7 @@
 <meta http-equiv="Expires" content="86400">
 <?php if(in_array(strtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
 <meta name="robots" content="noindex">
-<?php endif;?> 
+<?php endif;?>   
 <?php 
 echo $this->Html->meta(
     'favicon.ico',

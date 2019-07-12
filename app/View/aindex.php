@@ -676,7 +676,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </ul>
                 </div>
             </div>
-            <div class="update-review m_b_25">
+            <div class="update-review m_b_25">   
                 <h3 class="update_ttl"><a href="/reviews">みんなのレビュー</a></h3>
                 <div class="update_list update_list-review">
                     <ul>
