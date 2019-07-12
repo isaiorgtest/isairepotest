@@ -22,15 +22,15 @@ before_script:
 
 script:
   - |
+    echo "[DEBUG] Checking modified files"
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
-    echo "[DEBUG] [changed_files]"
+    echo "[DEBUG] Modified Files:"
     echo $changed_files
-    if [ $changed_files != '' ]; then 
-      echo "[DEBUG] not empty changed_files"
-      ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"
+    if [ $changed_files == '' ]; then 
+      echo "[DEBUG] No *.php files found to check"
     else
-      echo "[DEBUG] empty changed_files"
-      whereee=2      
+      echo "[DEBUG] Checking files for errors..."
+      ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"  
     fi
 
 notifications:
