@@ -3,7 +3,7 @@
 <head>
 <title>オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中</title>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
  
 <meta name="viewport" content="width=960"> 
 <meta name="description" content="オンライン英会話ネイティブキャンプでは、スマホアプリ、PCから予約なしで英会話レッスンが受講可能です。今なら初回限定<?php echo Configure::read('Free period'); ?>無料体験を実施中！初心者向け、子供向け、TOEIC®L&R TEST、英検対策に加え、カランメソッドやビジネス教材等、英会話学習に効果的なコースを多数設けており、ネットで英語留学が体感できます。">

@@ -17,6 +17,9 @@ branches:
   only:
     - master
 
+before_script:
+  - echo $TRAVIS_COMMIT_RANGE
+
 script:
   - '! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"'
 
