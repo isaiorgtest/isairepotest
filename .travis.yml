@@ -35,7 +35,7 @@ script:
         echo "[DEBUG] No errors found"
       else
         echo "[DEBUG] Errors found:"
-        echo $errors
+        echo $phperrors
       fi
       echo "[DEBUG] Done"
     fi
