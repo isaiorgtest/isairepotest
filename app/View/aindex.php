@@ -61,7 +61,7 @@ $ver = Configure::read('user.version');
             window.location.reload();
         }
     }
-</script>
+</script> 
 <!-- Begin Mieruca Embed Code -->
 <script type="text/javascript" id="mierucajs">
 window.__fid = window.__fid || [];__fid.push([741960509]);

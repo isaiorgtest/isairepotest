@@ -22,6 +22,7 @@ before_script:
 
 script:
   - |
+    echo "###############"
     echo "[DEBUG] Checking modified files"
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
     echo "[DEBUG] Modified Files:"
@@ -32,6 +33,7 @@ script:
       echo "[DEBUG] Checking files for errors..."
       ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"  
     fi
+    echo "###############"
 
 notifications:
   email: false
