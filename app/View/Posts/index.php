@@ -165,7 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php
     $headerElement = $this->fetch('header');
     if (!empty($headerElement)) {
-        echo $this->element($headerElement); 
+        echo $this->element($headerElemen
     }
 ?>
 <?php endif; ?>
