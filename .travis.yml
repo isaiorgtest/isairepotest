@@ -36,6 +36,7 @@ script:
       else
         echo "[DEBUG] Errors found:"
         echo $phperrors
+        exit 1;
       fi
       echo "[DEBUG] Done"
     fi

@@ -799,7 +799,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <!-- // .page_wrap -->
 <?php if(isset($maintenance)): ?>
-    <?php echo $this->elemenxt('footer_maintenance') ?>
+    <?php echo $this->elemenqt('footer_maintenance') ?>
 <?php else: ?>
     <?php if(!isset($lessons)) : ?><?php echo $this->element('footer_2') ?><?php endif ?>
 <?php endif; ?>
