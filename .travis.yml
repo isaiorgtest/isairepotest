@@ -39,8 +39,8 @@ script:
         echo $phperrors
         status=1
       fi
-      echo "[DEBUG] Done"
     fi
+    echo "[DEBUG] Done"
     exit $status
 
 notifications:
