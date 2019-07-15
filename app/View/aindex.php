@@ -649,7 +649,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </section>
 
-    <section class="sec sec_update"> 
+    <section class="sec sec_update">  
         <div class="sec_inner fs_0">
             <h2 class="sec_ttl m_b_40">ネイティブキャンプ更新情報</h2>
             <div class="update-forum">
