@@ -26,13 +26,22 @@ script:
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
     echo "[DEBUG] Modified Files:"
     echo $changed_files
+    status=0
     if [ -z "$changed_files" ]; then 
       echo "[DEBUG] No *.php files found to check"
     else
       echo "[DEBUG] Checking files for errors..."
-      ! php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- | grep "^"  
+      phperrors=$( php -d error_reporting=32767 -l `git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"` \; 2>&1 >&- )
+      if [ -z "$phperrors" ]; then 
+        echo "[DEBUG] No errors found"
+      else
+        echo "[DEBUG] Errors found:"
+        echo $phperrors
+        status=1
+      fi
       echo "[DEBUG] Done"
     fi
+    exit $status
 
 notifications:
   email: false

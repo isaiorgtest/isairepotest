@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head> 
+<head>
 <title>オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中</title>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">   
   
-<meta name="viewport" content="width=960">
+<meta name="viewport" content="width=960">  
 <meta name="description" content="オンライン英会話ネイティブキャンプでは、スマホアプリ、PCから予約なしで英会話レッスンが受講可能です。今なら初回限定<?php echo Configure::read('Free period'); ?>無料体験を実施中！初心者向け、子供向け、TOEIC®L&R TEST、英検対策に加え、カランメソッドやビジネス教材等、英会話学習に効果的なコースを多数設けており、ネットで英語留学が体感できます。">
 <meta name="keywords" content="オンライン英会話,ネイティブキャンプ,レッスン回数無制限,英語学習">
-<meta name="application-name" content="オンライン英会話ならskype（スカイプ）不要のネイティブキャンプ">
+<meta name="application-name" content="オンライン英会話ならskype（スカイプ）不要のネイティブキャンプ"> 
 <meta name="google-site-verification" content="FfrIYMK3Mo3WbWe05Wi4hSkFZ2WncJyDTma0x42JljE">
-<meta property="og:title" content="オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中" /> 
+<meta property="og:title" content="オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中" />
 <meta property="og:description" content="オンライン英会話ネイティブキャンプでは、スマホアプリ、PCから予約なしで英会話レッスンが受講可能です。今なら初回限定<?php echo Configure::read('Free period'); ?>無料体験を実施中！初心者向け、子供向け、TOEIC®L&R TEST、英検対策に加え、カランメソッドやビジネス教材等、英会話学習に効果的なコースを多数設けており、ネットで英語留学が体感できます。" />
 <meta property="og:image" content="https://nativecamp.net/images/logo_ogp.png?ver=4" />
-<meta property="og:url" content="https://nativecamp.net" />
-<meta property="og:type" content="website" />  
+<meta property="og:url" content="https://nativecamp.net" />  
+<meta property="og:type" content="website" /> 
 <meta property="fb:admins" content="419071474906535" />
 <meta property="og:site_name" content="オンライン英会話のネイティブキャンプ | 英会話<?php echo Configure::read('Free period'); ?>無料トライアル開催中" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:site" content="@NativeCamp"/> 
-<meta http-equiv="Expires" content="86400"> 
+<meta name="twitter:site" content="@NativeCamp"/>
+<meta http-equiv="Expires" content="86400">
 <?php if(in_array(strtolower($this->name),array('cakeerror','maintenance','accountdeactivation'))):?>
-<meta name="robots" content="noindex"> 
-<?php endif;?>  
-<?php
+<meta name="robots" content="noindex">
+<?php endif;?>   
+<?php 
 echo $this->Html->meta(
     'favicon.ico',
     '/favicon.ico?v=1',
     array('type' => 'icon')
-); 
+);
 $ver = Configure::read('user.version');
 ?>
 <?php
@@ -38,8 +38,8 @@ $ver = Configure::read('user.version');
         $layout_id = $_COOKIE['layout_id'];
     }
 ?>
-<link rel="manifest" href="/manifest.json"> 
-<?php  
+<link rel="manifest" href="/manifest.json">
+<?php
     echo $this->Html->css(array(
         'html5reset.css?v='.$ver,
         'common.css?v='.$ver,
@@ -47,7 +47,7 @@ $ver = Configure::read('user.version');
         'jquery-ui-1.12.1.css',
         'details_index_ver_3.css?v='.$ver,
     ));
-?>
+?> 
 <script type="text/javascript">
     // forcely refresh page if back btn is clicked.
     var login=<?php echo ($this->Session->read('Auth.User.id'))?1:0; ?>;
@@ -61,7 +61,7 @@ $ver = Configure::read('user.version');
             window.location.reload();
         }
     }
-</script> 
+</script>
 <!-- Begin Mieruca Embed Code -->
 <script type="text/javascript" id="mierucajs">
 window.__fid = window.__fid || [];__fid.push([741960509]);
@@ -69,7 +69,7 @@ window.__fid = window.__fid || [];__fid.push([741960509]);
 function mieruca(){if(typeof window.__fjsld != "undefined") return; window.__fjsld = 1; var fjs = document.createElement('script'); fjs.type = 'text/javascript'; fjs.async = true; fjs.id = "fjssync"; var timestamp = new Date;fjs.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://hm.mieru-ca.com/service/js/mieruca-hm.js?v='+ timestamp.getTime(); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(fjs, x); };
 setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent("onload", mieruca) : window.addEventListener("load", mieruca, false)) : mieruca();
 })();
-</script> 
+</script>
 <!-- End Mieruca Embed Code -->
 <?php if (($_GET['cc'] == 'afb' || $cm_code == 'afb')) : ?>
 <!-- Begin afb embed code -->
@@ -101,12 +101,12 @@ _lt('init', {
 });
 _lt('send', 'pv', ['1e11feb8-0b70-4f0b-b0b2-826a83b5721d']);
 </script>
-<noscript>
+<noscript> 
   <img height="1" width="1" style="display:none"
        src="https://tr.line.me/tag.gif?c_t=lap&t_id=1e11feb8-0b70-4f0b-b0b2-826a83b5721d&e=pv&noscript=1" />
 </noscript>
 <!-- End LINE Tag Base Code -->
-<?php endif; ?>
+<?php endif; ?> 
 <!--[if lt IE 9]>
 <script src="<?php echo $this->Html->webroot; ?>js/html5shiv.js"></script>
 <![endif]-->
@@ -151,14 +151,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php if(isset($maintenance)) : ?>
     <?php $this->assign('header','header_maintenance'); ?>
 <?php elseif($this->params['controller'] === "TestConnect"): ?>
-<?php else: ?>
+<?php else: ?>  
     <?php if($this->Session->read('Auth.User.id')): ?>
-        <?php if (isset($lessons)) : ?>
+        <?php if (isset($lessons)) : ?> 
             <?php //$this->assign('header','headerLesson'); ?>
         <?php else : ?>
             <?php $this->assign('header','header1'); ?>
-        <?php endif ?>
-    <?php else: ?>
+        <?php endif ?>: ?>
         <?php $this->assign('header','header1'); ?>
     <?php endif; ?>
 <?php endif; ?>
@@ -672,11 +671,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
                                 </a>
                             </li>
-                        <?php endforeach;?> 
+                        <?php endforeach;?>
                     </ul>
                 </div>
             </div>
-            <div class="update-review m_b_25">   
+            <div class="update-review m_b_25">
                 <h3 class="update_ttl"><a href="/reviews">みんなのレビュー</a></h3>
                 <div class="update_list update_list-review">
                     <ul>
@@ -791,7 +790,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <li>「FireFox」「Google Chrome」のどちらかが既にダウンロード済みの場合は必要ありません。</li>
                             </ul>
                         </div>
-                    </li>
+                    </li> 
                 </ul>
             </div>
         </div>
@@ -799,7 +798,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="#" class="top_link" id="top_link" data-scroll="pageTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
 </div>
 <!-- // .page_wrap -->
-<?php if(isset($maintenance)) : ?>
+<?php if(isset($maintenance)): ?>
     <?php echo $this->element('footer_maintenance') ?>
 <?php else: ?>
     <?php if(!isset($lessons)) : ?><?php echo $this->element('footer_2') ?><?php endif ?>
