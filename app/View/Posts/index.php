@@ -42,9 +42,7 @@ $ver = Configure::read('user.version');
 <?php
     echo $this->Html->css(array(
         'html5reset.css?v='.$ver,
-        'common.css?v='.$ver,
-        'font-awesome.min.css?v='.$ver,
-        'jquery-ui-1.12.1.css',
+        'common.css?v='.$ver,\
         'details_index_ver_3.css?v='.$ver,
     ));
 ?> 
