@@ -126,7 +126,7 @@ _lt('send', 'pv', ['1e11feb8-0b70-4f0b-b0b2-826a83b5721d']);
         var loc, ct = document.createElement("script"); 
         ct.type = "text/javascript"; 
         ct.async = true;
-        ct.src = url;
+        ct.src = url; 
         loc = document.getElementsByTagName('script')[0];
         loc.parentNode.insertBefore(ct, loc);
     }(document.location.protocol + "//intljs.rmtag.com/116386.ct.js"));

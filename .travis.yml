@@ -26,6 +26,7 @@ script:
     changed_files=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep "php"`
     echo "[DEBUG] Modified Files:"
     echo $changed_files
+    status=0
     if [ -z "$changed_files" ]; then 
       echo "[DEBUG] No *.php files found to check"
     else
@@ -36,10 +37,11 @@ script:
       else
         echo "[DEBUG] Errors found:"
         echo $phperrors
-        exit 1;
+        status=1
       fi
       echo "[DEBUG] Done"
     fi
+    exit $status
 
 notifications:
   email: false
