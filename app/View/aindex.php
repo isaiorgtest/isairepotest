@@ -152,7 +152,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <?php $this->assign('header','header_maintenance'); ?>
 <?php elseif($this->params['controller'] === "TestConnect"): ?>
 <?php else: ?>  
-    <?php if($this->Session->read('A>
+    <?php if($this->Session->read('Auth.User.id')): ?>
         <?php if (isset($lessons)) : ?> 
             <?php //$this->assign('header','headerLesson'); ?>
         <?php else : ?>
